@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.dflex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1fc8bd;
+  background-image: linear-gradient(140deg, #d04d9d 0%, #7d448e 50%, #293c80 75%);
+  padding: 0 80px;
+  .wrapper{
+    position: relative;
+    width: 100%;
+    @extend .dflex;
+    height: 100%;
+    padding: 100px 0;
+    justify-content: space-between;
+    .pos_abs{
+      position: absolute;
+      height: 50px;
+      color: #fff;
+      font-size: 30px;
+      &.top_nav{
+        @extend .dflex;
+        width: 100%;
+        justify-content: space-between;
+        top: 50px;
+        left: 0;
+        span{
+          @extend .dflex;
+          cursor: pointer;
+          &.logo{
+            font-size: 52px;
+          }
+        }
+      }
+      &.bottom_nav{
+        @extend .dflex;
+        width: 100%;
+        position: absolute;
+        justify-content: space-between;
+        height: 50px;
+        font-size: 26px;
+        color: #fff;
+        bottom: 30px;
+        span{
+          @extend .dflex;
+          cursor: pointer;
+          &.copyright_text {
+            font-size: 18px; // Adjusted font size
+          }
+        }
+      }
+    }
+    .content_left,.img_container{
+      @extend .dflex;
+      width: 50%;
+      height: 100%;
+      position: relative;
+      flex-direction: column;
+    }
+    .content_left{
+      align-items: flex-start;
+      padding-left: 14vw;
+      position: relative;
+      h3{
+        font-size: 17vw;
+        position: absolute;
+        top: 50%;
+        left: 150px;
+        transform: translateY(-50%);
+        opacity: .1;
+        color: #fff;
+        line-height: 1;
+        overflow: hidden;
+        user-select: none;
+      }
+      h2{
+        overflow: hidden;
+        span{
+          display: block;
+          font-size: 7vw;
+          color: #fff;
+          line-height: 1;
+          overflow: hidden;
+          letter-spacing: 5px;
+        }
+      }
+      p{
+        font-size: 28px;
+        margin: 2vw 0;
+        position: relative;
+        color:#fff;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: -2vw;
+          width: 7vw;
+          height: 3px;
+          background-color: #fff;
+        }
+      }
+      .button-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 0;
+      }
+      .button {
+        background-color: #fff;
+        color: #000;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .dots{
+        @extend .dflex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30px;
+        height: 150px;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        span{
+          width: 12px;
+          height: 12px;
+          border-radius: 12px;
+          display: block;
+          border: 2px solid #fff;
+          &.active{
+            border: none;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    .img_container{
+      align-items: flex-end;
+      padding-right: 150px;
+      position: relative;
+      img{
+        display: block;
+      }
+    }
+  }
+}
