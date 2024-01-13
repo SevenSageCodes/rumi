@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.dflex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1fc8bd;
+  background-image: linear-gradient(140deg, #d04d9d 0%, #7d448e 50%, #293c80 75%);
+  padding: 0 80px;
+
+  .wrapper{
+    position: relative;
+    width: 100%;
+    @extend .dflex;
+    height: 100%;
+    padding: 100px 0;
+    justify-content: center;
+
+    .pos_abs{
+      position: absolute;
+      height: 50px;
+      color: #fff;
+      font-size: 30px;
+      z-index: 1;
+    }
+
+    .gallery_container{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      color: #fff;
+      height: 90%;
+      padding: 0 2rem;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      margin-top: 1rem;
+      overflow-y: auto;
+      border-radius: 10px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .swiper{
+        align-items: center;
+        --swiper-pagination-color: #CDA12A;
+        --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.15);
+        --swiper-pagination-bullet-inactive-opacity: 1;
+        --swiper-pagination-bullet-size: 16px;
+        --swiper-pagination-bullet-horizontal-gap: 6px;
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;      
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .autoplay-progress {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        z-index: 10;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: lighter;
+        color: #fff;
+        letter-spacing: 3;
+      }
+      
+      .autoplay-progress svg {
+        --progress: 0;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 3px;
+        stroke: #fff;
+        fill: none;
+        stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
+      }
+
+    }
+
+  }
+} 
