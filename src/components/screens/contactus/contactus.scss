@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -37,12 +37,12 @@
       z-index: 1;
     }
 
-    .about_info{
+    .contact_info{
       position: relative;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
+      align-items: center;
+      text-align: center;
       width: 100%;
       color: #fff;
       height: 90%;
@@ -60,17 +60,33 @@
         display: none;
       }
 
+      .info_container {
+        justify-content: center;
+        align-items: center;
+        left: 10%;
+        top: 2rem;
+        bottom: 2rem;
+      }
+
       h1{
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        margin-top: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 1 rem;
+        letter-spacing: 5px;
+      }
+
+      h2{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        align-items: center;
+        letter-spacing: 5px;
+        margin-top: 2rem;
       }
 
       p{
         font-size: 1.2rem;
         line-height: 1.5;
-        margin: 0 2rem;
-        margin-bottom: 3rem;
+        letter-spacing: 5px;
+        margin-bottom: 4rem;
       }
     }
 

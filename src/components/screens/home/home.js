@@ -131,7 +131,10 @@ function Home() {
       <motion.div className='wrapper' initial='initial' animate='animate'>
         <motion.div className='pos_abs top_nav' variants={stagger}>
           <motion.span className='logo' variants={header}>RUMI</motion.span>
+          <motion.span variants={header} onClick={() => navigation("/gallery")}>Gallary</motion.span>
+          <motion.span variants={header} onClick={() => navigation("/products")}>Products</motion.span>
           <motion.span variants={header} onClick={() => navigation("/aboutus")}>About Us</motion.span>
+          <motion.span variants={header} onClick={() => navigation("/contactus")}>Contact Us</motion.span>
         </motion.div>
         <motion.div className='pos_abs bottom_nav' variants={stagger}>
         <motion.span variants={bottom} className="copyright_text">
@@ -152,7 +155,6 @@ function Home() {
             <motion.span variants={letter}>DRINK</motion.span>
           </motion.h2>
           <motion.p variants={fadeInUp}>Sip into Something Energy</motion.p>
-          
         </motion.div>
         <motion.div className='image_container' variants={stagger}>
           <motion.img src={process.env.PUBLIC_URL + `/images/rumi_black.png`} alt='rumiblack' variants={rumiblack}/>
